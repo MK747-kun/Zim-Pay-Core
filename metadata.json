@@ -1,0 +1,6 @@
+{
+  "name": "zim-pay-core | Multi-Currency Payment & Reconciliation Gateway",
+  "description": "High-throughput Zimbabwe multi-currency payment gateway with dual-currency rate-slippage guard (USD/ZiG), dynamic fallback routing (EcoCash/InnBucks/ZIPIT), ACID ledger reconciliation, and dual WhatsApp/Email messaging engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

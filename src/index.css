@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-espresso-bg: #0C0A09;
+    --color-espresso-card: #141210;
+    --color-roasted-gold: #F59E0B;
+    --color-brushed-copper: #EA580C;
+    --color-mint-gold: #10B981;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0C0A09;
+    color: #FDFBF7;
+  }
+
+  /* Editorial Hero Figures & Wealth Statements */
+  .font-serif, .editorial-serif {
+    font-family: var(--font-serif);
+  }
+
+  /* Headings & Section Labels */
+  h1, h2, h3, h4 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
+  }
+
+  /* Code, technical tokens, IDs, and hashes strictly use monospace */
+  code, pre, .font-mono, .tech-token {
+    font-family: var(--font-mono);
+  }
+
+  /* Bespoke Luxury Espresso Inputs */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    border-radius: 4px;
+    letter-spacing: -0.01em;
+    background-color: #171412;
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    color: #FDFBF7;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    background-color: #1F1B17;
+    border-color: #F59E0B !important;
+    box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.35), 0 0 20px rgba(245, 158, 11, 0.12);
+  }
+}
+
+/* Luxury Craftsmanship Card Elements */
+.luxury-card {
+  background: linear-gradient(180deg, rgba(24, 21, 18, 0.85) 0%, rgba(18, 16, 14, 0.95) 100%);
+  border: 1px solid rgba(180, 83, 9, 0.22);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(251, 191, 36, 0.08);
+  border-radius: 6px;
+  backdrop-filter: blur(20px);
+}
+
+.luxury-card-gold {
+  background: radial-gradient(circle at 10% 10%, rgba(217, 119, 6, 0.12) 0%, rgba(20, 18, 15, 0.96) 90%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(254, 240, 138, 0.15);
+  border-radius: 6px;
+}
+
+.luxury-pill-active {
+  background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
+  color: #1c1305;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35);
+}
+
+/* Gold Pulse Keyframe Animation */
+@keyframes goldPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4), inset 0 0 10px rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 4px rgba(245, 158, 11, 0.6), inset 0 0 18px rgba(245, 158, 11, 0.35);
+    border-color: rgba(245, 158, 11, 0.8);
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulseGlow 3s infinite ease-in-out;
+}
+
+/* Official Stamped Luxury Invoice Seal */
+.audit-seal-pattern {
+  background-image: radial-gradient(circle at center, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
